@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Earn For Earn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        }
+        
+        :root {
+            --bg-primary: #000000;
+            --bg-secondary: #111111;
+            --bg-card: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --border: #333333;
+            --shadow: rgba(0, 0, 0, 0.5);
+            --purple: #8a2be2;
+            --purple-dark: #6a0dad;
+            --blue: #2b6de2;
+            --success: #4CAF50;
+            --warning: #ff9800;
+            --error: #f44336;
+            --orange: #FF8C00;
+            --ban-red: #8B0000;
+        }
+        
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--purple), var(--blue));
+            border-radius: 3px;
+        }
+        
+        .logo {
+            width: 90px;
+            height: 90px;
+            border-radius: 25px;
+            background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2.2rem;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.3);
+        }
+        
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+            background: linear-gradient(45deg, var(--purple), var(--blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
+        
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .last-updated i {
+            color: var(--purple);
+        }
+        
+        .section {
+            background-color: var(--bg-card);
+            border-radius: 20px;
+            padding: 28px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border);
+            box-shadow: 0 8px 20px var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-2px);
+            border-color: var(--purple);
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 15px;
+        }
+        
+        .section-title i {
+            color: var(--purple);
+            width: 32px;
+            font-size: 1.4rem;
+        }
+        
+        .subsection {
+            margin-bottom: 25px;
+            padding-left: 18px;
+            border-left: 3px solid var(--purple);
+        }
+        
+        .subsection h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .subsection h4 {
+            font-size: 1.1rem;
+            margin: 18px 0 10px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        
+        p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 25px;
+            color: var(--text-secondary);
+        }
+        
+        li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        li strong {
+            color: white;
+        }
+        
+        .highlight {
+            color: white;
+            font-weight: 600;
+            background: linear-gradient(90deg, rgba(138, 43, 226, 0.2), transparent);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+            color: white;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        
+        .note-box {
+            background-color: var(--bg-secondary);
+            border-left: 4px solid var(--blue);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border: 1px solid var(--border);
+        }
+        
+        .note-box i {
+            color: var(--blue);
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+        
+        .warning-box {
+            background-color: rgba(255, 152, 0, 0.1);
+            border-left: 4px solid var(--warning);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border: 1px solid var(--border);
+        }
+        
+        .warning-box i {
+            color: var(--warning);
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+        
+        .ban-box {
+            background-color: rgba(139, 0, 0, 0.1);
+            border-left: 4px solid var(--ban-red);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border: 1px solid var(--border);
+        }
+        
+        .ban-box i {
+            color: var(--ban-red);
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+        
+        .security-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #1a1a1a, #222);
+            padding: 8px 16px;
+            border-radius: 30px;
+            border: 1px solid var(--purple);
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+        
+        .security-badge i {
+            color: var(--purple);
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 14px 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            min-width: 180px;
+            justify-content: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--purple-dark), var(--purple));
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.4);
+        }
+        
+        .btn:hover {
+            background-color: #333;
+            transform: translateY(-2px);
+            border-color: var(--purple);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--purple);
+            transform: translateY(-2px);
+        }
+        
+        .contact-info {
+            background: linear-gradient(135deg, #1a1a1a, #222);
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 25px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+        
+        .contact-info p {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .contact-info i {
+            color: var(--purple);
+            width: 24px;
+            font-size: 1.1rem;
+        }
+        
+        .table-of-contents {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0 30px;
+        }
+        
+        .toc-item {
+            background: var(--bg-secondary);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .toc-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+        }
+        
+        .toc-item a:hover {
+            color: var(--purple);
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 25px 0;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.9rem;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .table-of-contents {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-file-contract"></i>
+            </div>
+            <h1>Terms and Conditions</h1>
+            <div class="last-updated">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Last Updated: February 22, 2026</span>
+            </div>
+            <div style="margin-top: 15px;">
+                <span class="security-badge">
+                    <i class="fas fa-gavel"></i> Legal Agreement
+                </span>
+                <span class="security-badge" style="margin-left: 10px;">
+                    <i class="fas fa-check-circle"></i> Binding Contract
+                </span>
+            </div>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="section">
+            <div class="section-title">
+                <i class="fas fa-list"></i>
+                <span>Table of Contents</span>
+            </div>
+            <div class="table-of-contents">
+                <div class="toc-item"><a href="#acceptance">1. Acceptance</a></div>
+                <div class="toc-item"><a href="#eligibility">2. Eligibility</a></div>
+                <div class="toc-item"><a href="#account">3. Account Rules</a></div>
+                <div class="toc-item"><a href="#tasks">4. Tasks & Earning</a></div>
+                <div class="toc-item"><a href="#game-tasks">5. Game Tasks</a></div>
+                <div class="toc-item"><a href="#withdrawals">6. Withdrawals</a></div>
+                <div class="toc-item"><a href="#referral">7. Referral Program</a></div>
+                <div class="toc-item"><a href="#prohibited">8. Prohibited Acts</a></div>
+                <div class="toc-item"><a href="#bans">9. Bans & Suspensions</a></div>
+                <div class="toc-item"><a href="#liability">10. Liability</a></div>
+                <div class="toc-item"><a href="#changes">11. Changes</a></div>
+                <div class="toc-item"><a href="#contact">12. Contact</a></div>
+            </div>
+            <p class="note-box" style="margin-top: 10px; margin-bottom: 0;">
+                <i class="fas fa-exclamation-circle"></i> 
+                <strong>Important:</strong> By using Earn For Earn, you agree to these Terms. Please read them carefully.
+            </p>
+        </div>
+
+        <!-- 1. Acceptance of Terms -->
+        <div class="section" id="acceptance">
+            <div class="section-title">
+                <i class="fas fa-check-circle"></i>
+                <span>1. Acceptance of Terms</span>
+            </div>
+            <p>Welcome to Earn For Earn! By accessing or using our mobile application (the "App"), you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, please do not use the App.</p>
+            <p>These Terms constitute a legally binding agreement between you ("User", "You") and Earn For Earn ("we", "us", "our"). Your use of the App signifies your acceptance of these Terms, our <a href="#" style="color: var(--purple);">Privacy Policy</a>, and any future modifications.</p>
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>Binding Agreement:</strong> These Terms affect your legal rights. If you have questions, contact us before using the App.
+            </div>
+        </div>
+
+        <!-- 2. Eligibility -->
+        <div class="section" id="eligibility">
+            <div class="section-title">
+                <i class="fas fa-id-card"></i>
+                <span>2. Eligibility</span>
+            </div>
+            <p>By using Earn For Earn, you represent and warrant that:</p>
+            <ul>
+                <li><strong>You are at least 18 years old.</strong> The App is not intended for users under 18. We reserve the right to verify age and terminate accounts of minors.</li>
+                <li><strong>You have the legal capacity</strong> to enter into these Terms.</li>
+                <li><strong>You are not located in a country</strong> that is subject to a U.S. government embargo or that has been designated as a "terrorist-supporting" country.</li>
+                <li><strong>You are not on any list</strong> of prohibited or restricted parties (e.g., OFAC sanctions lists).</li>
+                <li><strong>You will provide accurate and complete information</strong> during registration and keep it updated.</li>
+            </ul>
+            <p>We reserve the right to refuse service, terminate accounts, or cancel transactions at our sole discretion.</p>
+        </div>
+
+        <!-- 3. Account Registration and Security -->
+        <div class="section" id="account">
+            <div class="section-title">
+                <i class="fas fa-user-lock"></i>
+                <span>3. Account Registration and Security</span>
+            </div>
+            <p>To access most features of the App, you must register for an account. You agree to:</p>
+            <ul>
+                <li><strong>Provide accurate, current, and complete information</strong> during registration (email, password).</li>
+                <li><strong>Maintain the security of your account credentials.</strong> You are responsible for all activities under your account.</li>
+                <li><strong>Notify us immediately</strong> of any unauthorized use of your account by emailing earnforearnsuportteam@gmail.com.</li>
+                <li><strong>Not share your account</strong> with others or create multiple accounts (one account per person).</li>
+            </ul>
+            <div class="ban-box">
+                <i class="fas fa-ban"></i>
+                <strong>Multiple Accounts:</strong> Creating more than one account per person is strictly prohibited and may result in a permanent ban of all associated accounts and forfeiture of all earnings.
+            </div>
+        </div>
+
+        <!-- 4. Tasks and Earning Coin -->
+        <div class="section" id="tasks">
+            <div class="section-title">
+                <i class="fas fa-tasks"></i>
+                <span>4. General Tasks and Earning Coin</span>
+            </div>
+            <p>The App offers two types of tasks: General Tasks and Game Tasks. This section covers General Tasks.</p>
+            <h3>4.1 General Task Rules</h3>
+            <ul>
+                <li><strong>Reward:</strong> Each completed general task rewards you with <span class="highlight">3 Coin</span>.</li>
+                <li><strong>Daily Limits:</strong> You can complete each general task up to 10 times per day. The total daily limit for all general tasks combined is <span class="highlight">100 tasks per day</span> (10 tasks × 10 attempts each). Limits reset at midnight (00:00 UTC).</li>
+                <li><strong>Cooldown:</strong> After completing a general task, you must wait <span class="highlight">60 seconds</span> before starting the same task again.</li>
+                <li><strong>Completion:</strong> To complete a task, you must click the "Start Task" button and wait 3 seconds. The task is automatically marked as complete after 3 seconds, and Coin is added to your balance.</li>
+                <li><strong>Fair Use:</strong> Attempting to bypass the 3-second timer or using automated tools to complete tasks is strictly prohibited and will result in a ban.</li>
+            </ul>
+            <h3>4.2 Task Availability</h3>
+            <p>We may add, remove, or modify tasks at any time without prior notice. Task availability may vary based on your region or other factors.</p>
+        </div>
+
+        <!-- 5. Game Tasks -->
+        <div class="section" id="game-tasks">
+            <div class="section-title">
+                <i class="fas fa-gamepad"></i>
+                <span>5. Game Tasks – Important Rules</span>
+            </div>
+            <p>Game tasks require you to install and play third-party games to earn verification codes. These tasks have stricter rules to prevent fraud.</p>
+            
+            <h3>5.1 List of Games and Rewards</h3>
+            <ul>
+                <li><strong>Green Road: Car Racing</strong> – Play 100 levels, get 10-digit code – Reward: <span class="highlight">1200 Coin</span></li>
+                <li><strong>Lunch The Ball Game</strong> – Complete 18 levels, get 8-digit code – Reward: <span class="highlight">100 Coin</span></li>
+                <li><strong>All Sort - Puzzle Game</strong> – Complete 70 levels, get 10-digit code – Reward: <span class="highlight">500 Coin</span></li>
+                <li><strong>Block Blast</strong> – Complete 50 levels, get 8-digit code – Reward: <span class="highlight">300 Coin</span></li>
+                <li><strong>SOS Game - AI Hard</strong> – Complete AI Hard mode, get 8-digit code – Reward: <span class="highlight">40 Coin</span></li>
+                <li><strong>Zombie Road</strong> – Achieve 80,000 score, get 10-digit code – Reward: <span class="highlight">1200 Coin</span></li>
+            </ul>
+
+            <h3>5.2 Game Task Rules</h3>
+            <ul>
+                <li><strong>One submission per game per day.</strong> You can submit a code for each game only once every 24 hours.</li>
+                <li><strong>Codes must be numeric and exactly the required length</strong> (8 or 10 digits).</li>
+                <li><strong>Codes are verified by admin.</strong> After submission, the status will be "pending" until reviewed. If approved, Coin is added to your balance. If rejected, no Coin is awarded.</li>
+                <li><strong>Approval time:</strong> Usually within 24-48 hours, but may take longer during high volume.</li>
+            </ul>
+
+            <div class="ban-box">
+                <i class="fas fa-skull-crossbones"></i>
+                <strong>⚠️ ZERO TOLERANCE FOR FAKE CODES:</strong> Submitting any code that is not genuinely obtained from the game (e.g., randomly generated, copied from others, or fake) will result in <strong>IMMEDIATE AND PERMANENT BAN</strong> of your account. All earnings will be forfeited, and you will be permanently blocked from using the App. No exceptions.
+            </div>
+
+            <h3>5.3 Game Installation</h3>
+            <p>The installation links provided in the App are for convenience. We are not responsible for the content, functionality, or privacy practices of third-party games. You download and install them at your own risk.</p>
+        </div>
+
+        <!-- 6. Withdrawals -->
+        <div class="section" id="withdrawals">
+            <div class="section-title">
+                <i class="fas fa-wallet"></i>
+                <span>6. Withdrawals – Payment Terms</span>
+            </div>
+            
+            <h3>6.1 Withdrawal Requirements</h3>
+            <p>To request a withdrawal, you must meet all of the following conditions:</p>
+            <ul>
+                <li><strong>Minimum Balance:</strong> You must have at least <span class="highlight">1000 Coin</span> in your account.</li>
+                <li><strong>Minimum Referrals:</strong> You must have referred at least <span class="highlight">3 active users</span> who have signed up using your referral code.</li>
+                <li><strong>Payment Window:</strong> Withdrawals can only be requested between the <span class="highlight">3rd and 9th of each month</span>. Requests outside this window will be rejected.</li>
+                <li><strong>Monthly Limit:</strong> You can only withdraw <span class="highlight">once per month</span>. If you have already withdrawn in the current month, you must wait until the next payment window.</li>
+                <li><strong>Verification:</strong> You must provide accurate Binance or Payoneer details. We are not responsible for funds sent to incorrect addresses due to user error.</li>
+            </ul>
+
+            <h3>6.2 Withdrawal Methods</h3>
+            <ul>
+                <li><strong>Binance:</strong> Provide your Binance email or UID. Optionally, you can provide your Binance Pay ID for faster processing.</li>
+                <li><strong>Payoneer:</strong> Provide your Payoneer registered email and optional Payoneer ID.</li>
+            </ul>
+
+            <h3>6.3 Processing Time</h3>
+            <p>Withdrawals are processed during the payment window (3rd-9th). It may take up to <span class="highlight">7 days</span> within that window for the funds to arrive. You will receive a notification when your withdrawal status changes.</p>
+
+            <h3>6.4 Conversion Rate</h3>
+            <p><span class="highlight">1000 Coin = $1 USD.</span> The amount you receive in your Binance/Payoneer account will be the USD equivalent, subject to any fees charged by the payment provider (Binance/Payoneer).</p>
+
+            <h3>6.5 Withdrawal History</h3>
+            <p>You can view all your withdrawal requests and their status (pending, approved, rejected) in the Withdraw section of the App.</p>
+
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>No Refunds/Cancellations:</strong> Once a withdrawal request is submitted, it cannot be cancelled. Approved withdrawals are final. If rejected, the Coin is returned to your balance, and you can request again in the next payment window.
+            </div>
+        </div>
+
+        <!-- 7. Referral Program -->
+        <div class="section" id="referral">
+            <div class="section-title">
+                <i class="fas fa-user-friends"></i>
+                <span>7. Referral Program</span>
+            </div>
+            <p>You can earn additional Coin by referring friends to Earn For Earn.</p>
+            <ul>
+                <li><strong>Bonus:</strong> You earn <span class="highlight">200 Coin</span> for each friend who signs up using your unique referral code and creates an account.</li>
+                <li><strong>Requirements:</strong> The referred friend must complete the signup process. Self-referrals (creating multiple accounts) are strictly prohibited and will result in a permanent ban.</li>
+                <li><strong>No Limit:</strong> There is no maximum number of referrals you can earn from.</li>
+                <li><strong>Referral Tracking:</strong> You can see your referred friends and the bonus earned in the Referral section of the App.</li>
+                <li><strong>Fraud:</strong> Any attempt to generate fake referrals (e.g., using temporary emails, bots, or creating dummy accounts) will result in immediate account termination and forfeiture of all earnings.</li>
+            </ul>
+        </div>
+
+        <!-- 8. Prohibited Activities -->
+        <div class="section" id="prohibited">
+            <div class="section-title">
+                <i class="fas fa-ban"></i>
+                <span>8. Prohibited Activities</span>
+            </div>
+            <p>You agree NOT to engage in any of the following prohibited activities:</p>
+            <ul>
+                <li><strong>Cheating:</strong> Using bots, scripts, automation tools, or any other method to complete tasks without genuine user interaction.</li>
+                <li><strong>Fake Game Codes:</strong> Submitting fabricated, guessed, or otherwise fake verification codes for game tasks.</li>
+                <li><strong>Multiple Accounts:</strong> Creating more than one account per person.</li>
+                <li><strong>VPN/Proxy Misuse:</strong> Using VPNs or proxies to bypass geographical restrictions or daily limits.</li>
+                <li><strong>Fraudulent Referrals:</strong> Referring yourself or creating fake accounts to earn referral bonuses.</li>
+                <li><strong>Harassment:</strong> Abusing support channels, threatening staff, or engaging in offensive behavior.</li>
+                <li><strong>Reverse Engineering:</strong> Attempting to decompile, reverse engineer, or otherwise derive the source code of the App.</li>
+                <li><strong>Unauthorized Access:</strong> Trying to access other users' accounts or our systems without permission.</li>
+            </ul>
+            <p>This list is not exhaustive. We reserve the right to determine, at our sole discretion, what constitutes prohibited activity.</p>
+        </div>
+
+        <!-- 9. Account Bans and Suspensions -->
+        <div class="section" id="bans">
+            <div class="section-title">
+                <i class="fas fa-gavel"></i>
+                <span>9. Account Bans, Suspensions, and Termination</span>
+            </div>
+            <p>We take fairness and security seriously. Violations of these Terms may result in the following actions:</p>
+            <ul>
+                <li><strong>Warning:</strong> For minor first-time offenses, we may issue a warning.</li>
+                <li><strong>Temporary Suspension:</strong> For moderate violations, your account may be suspended for a period (e.g., 7 days, 30 days).</li>
+                <li><strong>Permanent Ban:</strong> For severe or repeat violations, especially <strong>fake game codes, cheating, or multiple accounts</strong>, your account will be permanently banned.</li>
+            </ul>
+            
+            <div class="ban-box">
+                <i class="fas fa-skull"></i>
+                <strong>Permanent Ban Consequences:</strong>
+                <ul style="margin-top: 10px;">
+                    <li>You will lose access to your account and all accumulated Coin.</li>
+                    <li>You will not be able to withdraw any funds.</li>
+                    <li>You are prohibited from creating a new account.</li>
+                    <li>Your personal data may be retained for fraud prevention purposes.</li>
+                </ul>
+            </div>
+
+            <p><strong>No Appeal for Fake Codes:</strong> If you are banned for submitting a fake game code, the decision is final and not subject to appeal.</p>
+            <p>We reserve the right to terminate accounts for any reason at our discretion, including inactive accounts with zero balance for an extended period.</p>
+        </div>
+
+        <!-- 10. Limitation of Liability -->
+        <div class="section" id="liability">
+            <div class="section-title">
+                <i class="fas fa-exclamation-circle"></i>
+                <span>10. Limitation of Liability</span>
+            </div>
+            <p>To the maximum extent permitted by law, Earn For Earn and its owners, employees, partners, and affiliates shall not be liable for:</p>
+            <ul>
+                <li>Any indirect, incidental, special, consequential, or punitive damages arising out of your use of the App.</li>
+                <li>Any loss of profits, earnings, data, or goodwill.</li>
+                <li>Any errors or interruptions in service.</li>
+                <li>Any actions taken by third parties (e.g., game developers, payment processors).</li>
+                <li>Any damages resulting from unauthorized access to or alteration of your data.</li>
+            </ul>
+            <p>Our total liability to you for any claim arising from or related to the App shall not exceed the amount of Coin you have earned in the 30 days prior to the claim, converted to USD at the standard rate.</p>
+            <p>You acknowledge that the App is provided "AS IS" and "AS AVAILABLE" without warranties of any kind, either express or implied.</p>
+        </div>
+
+        <!-- 11. Modifications to Terms -->
+        <div class="section" id="changes">
+            <div class="section-title">
+                <i class="fas fa-sync-alt"></i>
+                <span>11. Modifications to These Terms</span>
+            </div>
+            <p>We may update these Terms from time to time. When we do, we will revise the "Last Updated" date at the top of this page. For significant changes, we may provide additional notice (e.g., an in-app notification or email).</p>
+            <p>Your continued use of the App after any changes constitutes your acceptance of the new Terms. If you do not agree to the changes, you must stop using the App and may request account deletion.</p>
+        </div>
+
+        <!-- 12. Contact Information -->
+        <div class="section" id="contact">
+            <div class="section-title">
+                <i class="fas fa-headset"></i>
+                <span>12. Contact Us</span>
+            </div>
+            <p>If you have any questions about these Terms, please contact us:</p>
+            
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> earnforearnsuportteam@gmail.com</p>
+                <p><i class="fab fa-telegram"></i> <strong>Telegram Support:</strong> @earnforearnsuportteam</p>
+                <p><i class="fas fa-clock"></i> <strong>Response Time:</strong> Typically within 24 hours</p>
+            </div>
+            
+            <p>For account-related issues, please email from your registered email address and include relevant details (screenshots, transaction IDs, etc.).</p>
+        </div>
+
+        <!-- Governing Law -->
+        <div class="section">
+            <div class="section-title">
+                <i class="fas fa-globe"></i>
+                <span>Governing Law</span>
+            </div>
+            <p>These Terms shall be governed by and construed in accordance with the laws of [Your Country/State], without regard to its conflict of law provisions. Any disputes arising under or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts located in [Your City/Country].</p>
+        </div>
+
+        <!-- Acknowledgment -->
+        <div class="section" style="background: linear-gradient(135deg, #1a1a1a, #222); border: 1px solid var(--purple);">
+            <div class="section-title">
+                <i class="fas fa-check-double"></i>
+                <span>Acknowledgment</span>
+            </div>
+            <p style="text-align: center; font-size: 1.1rem;">BY USING EARN FOR EARN, YOU ACKNOWLEDGE THAT YOU HAVE READ THESE TERMS AND CONDITIONS, UNDERSTAND THEM, AND AGREE TO BE BOUND BY THEM.</p>
+            <hr>
+            <p style="text-align: center; margin-bottom: 0; color: var(--text-secondary);">You also agree to our <a href="#" style="color: var(--purple);">Privacy Policy</a> and any future modifications.</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-links">
+                <a href="#" onclick="window.close(); return false;">
+                    <i class="fas fa-times-circle"></i> Close
+                </a>
+                <a href="#" onclick="window.history.back(); return false;">
+                    <i class="fas fa-arrow-left"></i> Go Back
+                </a>
+                <a href="mailto:earnforearnsuportteam@gmail.com">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </div>
+            <p>© 2026 Earn For Earn. All rights reserved.</p>
+            <p style="margin-top: 12px; font-size: 0.8rem; color: var(--text-secondary);">
+                <i class="fas fa-gavel"></i> Binding Contract • 
+                <i class="fas fa-shield-alt"></i> Fair Play Enforced • 
+                <i class="fas fa-ban"></i> No Tolerance for Cheating
+            </p>
+            <p style="margin-top: 8px; font-size: 0.75rem;">App Version 2.1.0</p>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="button-group">
+            <button class="btn btn-primary" onclick="window.close()">
+                <i class="fas fa-check"></i> I Agree
+            </button>
+            <button class="btn" onclick="window.history.back()">
+                <i class="fas fa-arrow-left"></i> Back to App
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Close/back functionality
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                window.history.back();
+            }
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('.toc-item a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
